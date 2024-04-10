@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+body,
+html {
+  font-family: "Inter", sans-serif;
+}
+header {
+  background-color: #ff3b3c;
+  height: 152px;
+  display: flex;
+  justify-content: center;
+}
+.container-header {
+  width: 1220px;
+}
+
+.container {
+  width: 1220px;
+  margin: 0 auto;
+  border: 1px solid #139624;
+}
+.product-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center center;
+}
+.product-card {
+  background-color: #f0f0f0;
+  border-radius: 14px;
+  max-width: 25%;
+  overflow: hidden;
+}
+.product-info {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.product-title {
+  font-size: 24px; 
+  font-weight: bold; /* Peso de fuente en negrita */
+  word-wrap: break-word; /* Evitar desbordamiento de texto */
+  display: block; /* Acomodar el siguiente elemento debajo */
+  line-height: 22px; /* Separación entre líneas */
+  margin-bottom: 10px; /* Espacio debajo del título */
+}
+.product-description {
+  font-size: 15px;
+  color: #666;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+.product-price-block {
+  display: flex;
+  margin: 5px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  font-weight: 700;
+  flex: 1;
+}
+.discount {
+  color: #3d8d19;
+  font-weight: 700;
+  font-size: 14px;
+  font-weight: bold;
+}

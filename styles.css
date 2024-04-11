@@ -3,68 +3,165 @@
 body,
 html {
   font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
 }
+
 header {
   background-color: #ff3b3c;
   height: 152px;
   display: flex;
   justify-content: center;
 }
+
 .container-header {
   width: 1220px;
 }
 
-.container {
-  width: 1220px;
-  margin: 0 auto;
-  border: 1px solid #139624;
+section#hero {
+  background: url("./assets/hero_bg.png");
+  background-size: cover;
+  /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+  height: 340px;
+  /* Altura fija del elemento */
+  background-position: top center;
+  /* Posición de la imagen de fondo en la parte superior y centrada horizontalmente */
+  display: flex;
+  /* Usa el modelo de caja flexible */
+  align-items: center;
+  /* Centra verticalmente el contenido dentro del contenedor */
 }
+
+section#hero .container-section {
+  width: 1220px;
+  /* Ancho fijo del contenedor interno */
+  margin: 0 auto;
+  /* Centra el contenedor horizontalmente en relación con su padre */
+}
+
+.title-container span {
+  display: block;
+  /* Hace que los elementos <span> sean bloques */
+  color: white;
+  font-weight: 700;
+  /* Peso de la fuente en negrita */
+}
+
+.title-container span:first-child {
+  font-size: 40px;
+  /* Tamaño de fuente para el primer span */
+}
+
+.title-container span:last-child {
+  font-size: 100px;
+  /* Tamaño de fuente para el último span */
+  line-height: 80px;
+  /* Altura de línea para el último span */
+}
+
+.container-main {
+  width: 1220px;
+  /* Ancho fijo del contenedor principal */
+  margin: 0 auto;
+  /* Centra el contenedor horizontalmente en relación con su padre */
+  padding: 45px 0;
+  /* Relleno superior e inferior de 45px, sin relleno horizontal */
+}
+
+.product-container {
+  display: grid;
+  /* Usa el modelo de caja en cuadrícula */
+  grid-template-columns: repeat(4, 1fr);
+  /* Crea una cuadrícula con 4 columnas iguales */
+  gap: 20px;
+  /* Espacio entre las celdas de la cuadrícula */
+}
+
 .product-img {
   width: 100%;
+  /* Ancho completo de la imagen */
   height: 250px;
+  /* Altura fija de la imagen */
   object-fit: cover;
+  /* Ajusta la imagen dentro del contenedor sin deformarla */
   object-position: center center;
+  /* Posición de la imagen centrada horizontal y verticalmente */
 }
+
 .product-card {
   background-color: #f0f0f0;
   border-radius: 14px;
-  max-width: 25%;
+  /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Sombra difusa */
   overflow: hidden;
+  /* Oculta el contenido que desborda el contenedor */
 }
+
 .product-info {
   padding: 20px;
+  /* Relleno interno de 20px */
   box-sizing: border-box;
+  /* Incluye el relleno en el cálculo del tamaño total */
 }
+
 .product-title {
-  font-size: 24px; 
-  font-weight: bold; /* Peso de fuente en negrita */
-  word-wrap: break-word; /* Evitar desbordamiento de texto */
-  display: block; /* Acomodar el siguiente elemento debajo */
-  line-height: 22px; /* Separación entre líneas */
-  margin-bottom: 10px; /* Espacio debajo del título */
+  font-size: 24px;
+  /* Tamaño de fuente del título del producto */
+  font-weight: bold;
+  /* Peso de la fuente en negrita */
+  word-wrap: break-word;
+  /* Permite dividir palabras largas automáticamente */
+  display: block;
+  /* Acomoda el siguiente elemento debajo */
+  line-height: 22px;
+  /* Altura de línea del texto */
+  margin-bottom: 10px;
+  /* Espacio inferior del título */
 }
+
 .product-description {
   font-size: 15px;
+  /* Tamaño de fuente de la descripción del producto */
   color: #666;
   font-weight: normal;
+  /* Peso de la fuente normal */
   margin-bottom: 6px;
+  /* Espacio inferior de la descripción */
 }
+
 .product-price-block {
   display: flex;
+  /* Usa el modelo de caja flexible */
   margin: 5px 0;
+  /* Margen superior e inferior de 5px, sin margen horizontal */
   justify-content: space-between;
+  /* Distribuye el espacio entre los elementos hijos */
   align-items: center;
+  /* Centra verticalmente los elementos hijos */
 }
+
 .price {
   font-size: 20px;
+  /* Tamaño de fuente del precio */
   font-weight: bold;
+  /* Peso de la fuente en negrita */
   color: #333;
-  font-weight: 700;
   flex: 1;
+  /* Ocupa el espacio disponible en la cuadrícula flexible */
 }
+
 .discount {
   color: #3d8d19;
-  font-weight: 700;
-  font-size: 14px;
   font-weight: bold;
+  /* Peso de la fuente en negrita */
+  font-size: 14px;
+  /* Tamaño de fuente del descuento */
+}
+
+.product-tax-policy {
+  font-size: 14px;
+  /* Tamaño de fuente de la política de impuestos */
+  color: #999;
 }
